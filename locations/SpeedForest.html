@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Foggy Forest</title>
+        <script src="../libs/aframe.min.js"></script>
+        <script src="../libs/aframe-environment-component.min.js"></script>
+        <script src="../libs/aframe-sun-sky-component.min.js"></script>
+    </head>
+
+    <body>
+    <audio id="myaudio" autoplay loop>
+        <source src="../music/Forest.mp3">
+    </audio>
+        <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
+                 environment="preset: forest;
+                            shadow: true;
+                            shadowsize: 10;
+                            playArea: 0.5;
+                            groundColor: #149e2e;
+                            groundColor2: #055e16;
+                            ground: flat;
+                            fog: 0.95;
+                            groundTexture: walkernoise;
+                            grid: none;
+                            dressing: trees;
+                            dressingScale: 15;
+                            dressingAmount: 320;
+                            dressingVariance: '1 1 1';
+                            dressingColor: #18a332;">
+            <!--variables-->
+            <a-assets>
+                <img id="NeonPlayerPortal" crossorigin="anonymous" src="../img/common/portal.jpg"/>
+            </a-assets>
+
+            <!--Portal 1 - Cats-->
+            <a-entity link="href: CatBalls.html; title: Great Cat Balls; image: #NeonPlayerPortal"
+                      position="24 1.6 3"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="forward" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="backward" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <!--Portal 2 - Warps-->
+            <a-entity link="href: WarpWalley.html; title: Mystery Warps Walley; image: #NeonPlayerPortal"
+                      position="-18.5 1.6 3.5"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="forward" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="backward" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <!--Portal 3 - SpinnerDust-->
+            <a-entity link="href: SpinnerDust.html; title: Kingdom of Pharaon Yura; image: #NeonPlayerPortal"
+                      position="-6 1.6 -20"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="forward" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="backward" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1921" height="335" style="width: 1478px; height: 258px;"></canvas>
+            <div class="a-enter-vr" aframe-injected="">
+                <button class="a-enter-vr-button" aframe-injected="">
+                </button>
+            </div>
+            <div class="a-orientation-modal a-hidden" aframe-injected="">
+                <button aframe-injected="">Exit VR</button>
+            </div>
+            <a-entity position="" data-aframe-default-camera="" camera="" wasd-controls="" rotation="" look-controls="" aframe-injected="" scale="" visible="">
+            </a-entity>
+            <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity>
+            <a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity>
+            <!--Cursor-->
+            <a-camera>
+                <a-cursor  geometry="primitive: ring; radiusOuter: 0.05;
+                          radiusInner: 0.03;"
+                           material="color: cyan; shader: flat"
+                           cursor="fuse:true">
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale"
+                                 fill="forwards" from="1 1 1" to="0.8 0.8 0.8" dur="2000">
+                    </a-animation>
+                </a-cursor>
+            </a-camera>
+        </a-scene>
+        <script>
+            var audio = document.getElementById("myaudio");
+            audio.volume = 0.1;
+        </script>
+    </body>
+</html>

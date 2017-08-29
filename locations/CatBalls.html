@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Great Cat Balls</title>
+        <script src="../libs/aframe.min.js"></script>
+        <script src="../libs/aframe-gif-shader.min.js"></script>
+    </head>
+
+    <body>
+    <audio id="myaudio" autoplay loop>
+        <source src="../music/CatBalls.mp3">
+    </audio>
+        <a-scene fog="type: linear; color: #AAB; far: 30; near: 0"
+                 class="fullscreen"
+                 canvas=""
+                 inspector=""
+                 keyboard-shortcuts=""
+                 screenshot="" vr-mode-ui="">
+            <a-assets>
+                <img id="highlight1" src="../img/common/radial-highlight.png">
+                <img id="shadow3" src="../img/common/radial-shadow-3.png">
+                <img id="lsdcat" src="../img/CatBalls/lsdcat.gif">
+                <img id="pizzacat" src="../img/CatBalls/pizzacat.gif">
+                <img id="pusheen" src="../img/CatBalls/pusheen.gif">
+                <img id="nyancat" src="../img/CatBalls/nyancat.gif">
+                <img id="grumpycat" src="../img/CatBalls/grumpycat.gif">
+                <img id="omgcat" src="../img/CatBalls/omgcat.gif">
+                <img id="ornamentcat" src="../img/CatBalls/ornamentcat.gif">
+                <img id="rainbowcat" src="../img/CatBalls/rainbowcat.gif">
+                <img id="scaredcat" src="../img/CatBalls/scaredcat.gif">
+
+                <img id="NeonPlayerPortal" crossorigin="anonymous" src="../img/common/portal.jpg"/>
+            </a-assets>
+
+            <a-entity position="0 0 -10" rotation="" scale="" visible="">
+
+                <a-image position="0 -.2 5" src="#highlight1" rotation="-90 0 0" scale="30 30 30" visible="" material="" geometry=""></a-image>
+
+                <a-entity position="0 0 -5" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#lsdcat;" position="0 4.2 0" radius="4.2" color="#F16745" roughness="0.8" width-segments="52" height-segments="52" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear">
+                            <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                        </a-animation>
+                    </a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="3 3 3" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="-3 0 0" rotation="" scale="" visible="">
+                    <a-sphere  material="shader:gif;src:#pizzacat;" position="0 1.75 0" radius="1.75" color="#7BC8A4" roughness="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="1.75 1.75 1.75" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="1 0 0" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#pusheen;" position="0 1 0" radius="1" color="#4CC3D9" metalness="0.1" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation attribute="rotation" dur="2000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                    </a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="1 1 1" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="3 0 1" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#nyancat;" position="0 0.5 0" radius="0.5" color="#FFC65D" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                    </a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="0.5 0.5 0.5" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="20 0 -2" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#omgcat;" position="0 10 0" radius="10" color="#93648D" segments-width="52" segments-height="52" rotation="0 180 0" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="9 9 9" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="-24 0 -34" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#ornamentcat;" position="0 18 0" radius="18" color="#FFC65D" rotation="-10 -45 -45" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="8 8 8" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="25 0 20" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#nyancat;" position="0 12 0" radius="12" color="#7BC8A4" rotation="0 90 0" scale="" visible="" material="" geometry="">
+                        <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                    </a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="8 8 8" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="-15 0 5" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#grumpycat;" position="0 3 0" radius="3" color="#ECECEC" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="3 3 3" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="-6 0 6" rotation="" scale="" visible="">
+                    <a-sphere  material="shader:gif;src:#scaredcat;" position="0 1 0" radius="1" color="#F16745" roughness="0.8" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="1 1 1" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="-20 0 30" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#nyancat;" position="0 30 0" radius="30" color="#FFC65D" roughness="0.6" rotation="0 90 0" scale="" visible="" material="" geometry="">
+                        <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                    </a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="15 15 15" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="-1 0 14" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#pizzacat;" position="0 2 0" radius="2" color="#4CC3D9" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="2 2 2" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="10 0 15" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#omgcat;" position="0 4 0" radius="4" color="#F16745" roughness="1" rotation="0 180 0" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="2 2 2" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="6 0 4" rotation="" scale="" visible="">
+                    <a-sphere material="shader:gif;src:#rainbowcat;" position="0 1.5 0" radius="1.5" color="#4CC3D9" metalness="0.1" rotation="0 165 0" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="1.5 1.5 1.5" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="5 0 14" rotation="" scale="" visible="">
+                    <a-sphere position="0 .6 0" radius=".6" color="#FFC65D" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="0.6 0.6 0.6" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="5 0 25" rotation="" scale="" visible="">
+                    <a-sphere position="0 2 0" radius="2" color="#93648D" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="2 2 2" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="2 0 15" rotation="" scale="" visible="">
+                    <a-sphere position="0 0.2 0" radius="0.2" color="#ECECEC" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="0.2 0.2 0.2" opacity="0.5" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="4 0 10" rotation="" scale="" visible="">
+                    <a-sphere position="0 0.15 0" radius="0.15" color="#93648D" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="0.25 0.25 0.25" opacity="0.6" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="4 0 11" rotation="" scale="" visible="">
+                    <a-sphere position="0 0.1 0" radius="0.1" color="#4CC3D9" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="0.15 0.15 0.15" opacity="0.6" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+                <a-entity position="5 0 11" rotation="" scale="" visible="">
+                    <a-sphere position="0 0.3 0" radius="0.3" color="#7BC8A4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+                    <a-image src="#shadow3" rotation="-90 0 0" scale="0.25 0.25 0.25" opacity="0.6" position="" visible="" material="" geometry=""></a-image>
+                </a-entity>
+
+            </a-entity>
+
+            <a-sky color="#AAB" position="" rotation="" scale="" visible="" material="" geometry=""></a-sky>
+            <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1921" height="335" style="width: 1478px; height: 258px;"></canvas>
+            <div class="a-enter-vr" aframe-injected=""><button class="a-enter-vr-button" aframe-injected="">
+                </button></div><div class="a-orientation-modal a-hidden" aframe-injected="">
+                <button aframe-injected="">Exit VR</button>
+            </div>
+            <a-entity position="" data-aframe-default-camera="" camera="" wasd-controls="" rotation="" look-controls="" aframe-injected="" scale="" visible="">
+            </a-entity>
+            <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity>
+            <a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity>
+
+            <!--Portals-->
+            <a-entity link="href: WarpWalley.html; title: Mystery Warps Walley; image: #NeonPlayerPortal"
+                      position="40 1.5 15"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <a-entity link="href: SpinnerDust.html; title: Kingdom of Pharaon Yura; image: #NeonPlayerPortal"
+                      position="4 1.5 18"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <a-entity link="href: NeonPlayer.html; title: to Neon Land; image: #NeonPlayerPortal"
+                      position="-35 1.6 -58"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <!--Cursor-->
+            <a-camera>
+                <a-cursor  geometry="primitive: ring; radiusOuter: 0.05;
+                          radiusInner: 0.03;"
+                           material="color: cyan; shader: flat"
+                           cursor="fuse:true">
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale"
+                                 fill="forwards" from="1 1 1" to="0.8 0.8 0.8" dur="2000">
+                    </a-animation>
+                </a-cursor>
+            </a-camera>
+        </a-scene>
+    <script>
+        var audio = document.getElementById("myaudio");
+        audio.volume = 0.1;
+    </script>
+    </body>
+</html>

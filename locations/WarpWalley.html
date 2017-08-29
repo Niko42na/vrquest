@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Walley of Mysterious Warps </title>
+        <script src="../libs/aframe.min.js"></script>
+        <script src="../libs/aframe-environment-component.min.js"></script>
+    </head>
+
+    <body>
+        <audio id="myaudio" autoplay loop>
+            <source src="../music/WarpWalley.mp3">
+        </audio>
+        <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
+                 environment="preset: contact;
+                            shadow: true;
+                            playArea: 0.9;
+                            groundColor: #9c719e;
+                            groundColor2: #fba8ff;
+                            ground: noise;
+                            groundYScale: 3;
+                            groundTexture: walkernoise;
+                            grid: 'none';
+                            dressing: apparatus;
+                            dressingAmount: 25;
+                            dressingVariance: '1 1 1';
+                            dressingColor: #a56a17;">
+            <!--variables-->
+            <a-assets>
+                <img id="NeonPlayerPortal" crossorigin="anonymous" src="../img/common/portal.jpg"/>
+            </a-assets>
+
+            <!--Small warps-->
+            <a-entity position="-2 10.5 -10" rotation="12 78 0" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="25 5.5 -15" rotation="-35 120 90" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="15 17.5 15" rotation="75 25 15" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="5 4 3" rotation="45 17 65" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="45 -15.5 -15" rotation="90 10 100" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="45 5.5 -5" rotation="75 10 95" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="-15 5.5 5" rotation="77 35 95" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="35 2.5 -15" rotation="5 10 100" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="-5 5.5 -5" rotation="45 10 -95" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="-12 3.5 15" rotation="45 10 115" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+
+            <a-entity position="-15 5.5 55" rotation="45 10 115" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="-35 6.5 55" rotation="95 86 115" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+            <a-entity position="-15 7.5 -55" rotation="45 10 115" scale="" visible="">
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="1 0 1" to="1 1 1" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#7BC8A4" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.9 0 0.9" to="0.9 1 0.9" delay="200" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#F16745" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="200" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.8 0 0.8" to="0.8 1 0.8" delay="400" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#4CC3D9" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="400" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.7 0 0.7" to="0.7 1 0.7" delay="600" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#FFC65D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="600" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+
+                <a-entity position="" rotation="" scale="" visible="">
+                    <a-animation repeat="indefinite" attribute="scale" from="0.6 0 0.6" to="0.6 1 0.6" delay="800" dur="2000" fill="both"></a-animation>
+                    <a-cylinder position="0 2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                    <a-cylinder position="0 -2 0" radius="2" height="2" color="#93648D" open-ended="true" side="double" rotation="" scale="" visible="" material="" geometry="">
+                        <a-animation repeat="indefinite" attribute="scale" from="1 1.25 1" to="1 0 1" delay="800" dur="2000" fill="both"></a-animation>
+                    </a-cylinder>
+                </a-entity>
+            </a-entity>
+
+            <!--широта висота довгота-->
+            <!--Portal 1 - Cats-->
+            <a-entity link="href: CatBalls.html; title: Great Cat Balls; image: #NeonPlayerPortal"
+                      position="39 1.6 18.7"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <!--Portal 2 - SpinnerDust-->
+            <a-entity link="href: SpinnerDust.html; title: Kingdom of Pharaon Yura; image: #NeonPlayerPortal"
+                      position="-44 1.6 18.7"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <!--Portal 3 - Forrest-->
+            <a-entity link="href: SpeedForest.html; title: Foggy Forrest; image: #NeonPlayerPortal"
+                      position="-5 1.6 -50.7"
+                      rotation="0 0 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1921" height="335" style="width: 1478px; height: 258px;"></canvas>
+            <div class="a-enter-vr" aframe-injected="">
+                <button class="a-enter-vr-button" aframe-injected="">
+                </button>
+            </div>
+            <div class="a-orientation-modal a-hidden" aframe-injected="">
+                <button aframe-injected="">Exit VR</button>
+            </div>
+            <a-entity position="" data-aframe-default-camera="" camera="" wasd-controls="" rotation="" look-controls="" aframe-injected="" scale="" visible="">
+            </a-entity>
+            <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity>
+            <a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity>
+
+            <!--Cursor-->
+            <a-camera>
+                <a-cursor  geometry="primitive: ring; radiusOuter: 0.05;
+                          radiusInner: 0.03;"
+                           material="color: cyan; shader: flat"
+                           cursor="fuse:true">
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale"
+                                 fill="forwards" from="1 1 1" to="0.8 0.8 0.8" dur="2000">
+                    </a-animation>
+                </a-cursor>
+            </a-camera>
+        </a-scene>
+        <script>
+            var audio = document.getElementById("myaudio");
+            audio.volume = 0.1;
+        </script>
+    </body>
+</html>

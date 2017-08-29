@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Flying spinners Dust </title>
+        <script src="../libs/aframe.min.js"></script>
+        <script src="../libs/aframe-environment-component.min.js"></script>
+    </head>
+
+    <body>
+    <audio id="myaudio" autoplay loop>
+        <source src="../music/SpinnerDust.mp3">
+    </audio>
+        <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
+                 environment="preset: egypt;
+                            shadow: true;
+                            skyType:gradient;
+                            skyColor:#e09557;
+                            horizonColor:#ffdcbf;
+                            lighting:point;
+                            shadowsize: 10;
+                            playArea: 0.5;
+                            groundColor: #c6a82d;
+                            groundColor2: #b29625;
+                            ground: hills;
+                            groundYScale: 2;
+                            groundTexture: walkernoise;
+                            grid: none;
+                            dressing: pyramids;
+                            dressingScale: 15;
+                            dressingAmount: 5;
+                            dressingVariance: '1 1 1';
+                            dressingColor: #a56a17;">
+            <!--variables-->
+            <a-assets>
+                <a-mixin id="light"
+                         geometry="primitive: torusKnot;
+                                   radius: 5;
+                                   p: 5; q: 11"
+                         material="color: #fff; shader: flat; roughness: 0.1">
+                </a-mixin>
+                <a-asset-item id="spinner" src="../objects/SpinnerDust/fidget-spinner.dae"></a-asset-item>
+                <img id="NeonPlayerPortal" crossorigin="anonymous" src="../img/common/portal.jpg"/>
+            </a-assets>
+
+            <!--spinners-->
+            <a-entity position="0 0 0" rotation="" scale="" visible="">
+                <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" easing="linear" dur="10000"></a-animation>
+                <a-entity position="20 10 0" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
+                <a-entity position="-20 20 0" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
+                <a-entity position="20 20 0" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
+                <a-entity position="80 20 0" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
+                <a-entity position="40 5 -2" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
+                <a-entity position="35 4 8" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
+                <a-entity position="0 20 -20" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
+                <a-entity position="4 10 -20" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
+                <a-entity position="7 10 -10" rotation="0 0 0" collada-model="#spinner">
+                    <a-animation attribute="rotation" dur="800" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+            </a-entity>
+
+            <a-entity position="17 8 -25" rotation="0 0 0" collada-model="#spinner">
+                <a-animation attribute="rotation" dur="500" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+            </a-entity>
+
+            <a-entity position="10 6 2" rotation="0 0 0" collada-model="#spinner">
+                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+            </a-entity>
+
+            <!--Portal 1 - Cats-->
+            <a-entity link="href: CatBalls.html; title: Great Cat Balls; image: #NeonPlayerPortal"
+                      position="15 1.6 -84.7"
+                      rotation="0 45 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <!--Portal 2 - Warps-->
+            <a-entity link="href: WarpWalley.html; title: Mystery Warps Walley; image: #NeonPlayerPortal"
+                      position="-67 1.6 -5.7"
+                      rotation="0 -45 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <!--Portal 3 - Forrest-->
+            <a-entity link="href: SpeedForest.html; title: Foggy Forrest; image: #NeonPlayerPortal"
+                      position="35 1.6 5.7"
+                      rotation="0 60 0"
+                      scale="0.25 0.25 0.25">
+                <a-animation begin="mouseenter" easing="ease-in" attribute="scale"
+                             fill="both" from="0.25 0.25 0.25" to="0.5 0.5 0.5" dur="500">
+                </a-animation>
+                <a-animation begin="mouseleave" easing="ease-in" attribute="scale"
+                             fill="both" from="0.5 0.5 0.5" to="0.25 0.25 0.25" dur="500">
+                </a-animation>
+            </a-entity>
+
+            <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1921" height="335" style="width: 1478px; height: 258px;"></canvas>
+            <div class="a-enter-vr" aframe-injected="">
+                <button class="a-enter-vr-button" aframe-injected="">
+                </button>
+            </div>
+            <div class="a-orientation-modal a-hidden" aframe-injected="">
+                <button aframe-injected="">Exit VR</button>
+            </div>
+            <a-entity position="" data-aframe-default-camera="" camera="" wasd-controls="" rotation="" look-controls="" aframe-injected="" scale="" visible="">
+            </a-entity>
+            <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity>
+            <a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity>
+
+            <!--Cursor-->
+            <a-camera>
+                <a-cursor  geometry="primitive: ring; radiusOuter: 0.05;
+                          radiusInner: 0.03;"
+                           material="color: cyan; shader: flat"
+                           cursor="fuse:true">
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale"
+                                 fill="forwards" from="1 1 1" to="0.8 0.8 0.8" dur="2000">
+                    </a-animation>
+                </a-cursor>
+            </a-camera>
+        </a-scene>
+        <script>
+            var audio = document.getElementById("myaudio");
+            audio.volume = 0.1;
+        </script>
+    </body>
+</html>
